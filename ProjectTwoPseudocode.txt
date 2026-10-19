@@ -1,0 +1,51 @@
+Fabio Caminotto
+CS 210 Project Two Pseudocode
+Airgead Banking Investment Calculator
+
+START program
+Create an AirgeadBanking object
+Call the run function
+
+RUN FUNCTION
+Set runAgain to true
+WHILE runAgain is true
+    Display the data input heading
+    Ask for the initial investment amount
+    Validate that the value is a positive number
+    Ask for the monthly deposit amount
+    Validate that the value is a positive number
+    Ask for the annual interest rate
+    Validate that the value is a positive number
+    Ask for the number of years
+    Validate that the value is a positive whole number
+    Ask the user to press Enter to continue
+    Display the report without additional monthly deposits
+    Display the report with additional monthly deposits
+    Ask the user if another scenario should be tested
+    Validate that the answer is Y or N
+END WHILE
+Display the closing message
+END RUN FUNCTION
+
+DISPLAY REPORT FUNCTION
+Set balance equal to the initial investment amount
+Calculate the monthly interest rate from the annual interest rate
+Display the report title
+Display the Year, Year End Balance, and Year End Earned Interest headings
+FOR each year from 1 through the number of years
+    Set yearlyInterest to zero
+    IF the report includes monthly deposits
+        FOR each month from 1 through 12
+            Calculate interest using (balance + monthly deposit) times monthly interest rate
+            Add monthly deposit and interest to balance
+            Add interest to yearlyInterest
+        END FOR
+    ELSE
+        Calculate yearlyInterest using balance times annual interest rate
+        Add yearlyInterest to balance at the end of the year
+    END IF
+    Display the year, ending balance, and yearly earned interest
+END FOR
+END DISPLAY REPORT FUNCTION
+
+END program
